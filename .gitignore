@@ -1,0 +1,16 @@
+/bin/
+/plugins/
+/sonar/
+/.settings/
+/target/
+/.idea/
+/.vscode/
+
+.classpath
+.factorypath
+.project
+*.iml
+*.bak
+.DS_Store
+
+dependency-reduced-pom.xml
