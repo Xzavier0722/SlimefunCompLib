@@ -12,4 +12,5 @@ public class CargoInsertEvent extends CargoOperationEvent {
     public CargoInsertEvent(Block node, Block target, Inventory inv) {
         super(node, target, inv);
     }
+
 }

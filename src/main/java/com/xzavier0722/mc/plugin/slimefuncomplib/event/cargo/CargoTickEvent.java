@@ -2,6 +2,7 @@ package com.xzavier0722.mc.plugin.slimefuncomplib.event.cargo;
 
 import com.xzavier0722.mc.plugin.slimefuncomplib.event.CancellableEvent;
 import org.bukkit.Location;
+import org.bukkit.event.HandlerList;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -11,6 +12,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class CargoTickEvent extends CancellableEvent {
+    private static final HandlerList handlers = new HandlerList();
     private final Map<Location, Integer> inputs;
     private final Map<Integer, List<Location>> outputs;
     private String hologramMsg;
@@ -50,5 +52,16 @@ public class CargoTickEvent extends CancellableEvent {
      */
     public void setHologramMsg(@Nullable String msg) {
         this.hologramMsg = msg;
+    }
+
+    @Nonnull
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
+
+    @Override
+    @Nonnull
+    public HandlerList getHandlers() {
+        return handlers;
     }
 }

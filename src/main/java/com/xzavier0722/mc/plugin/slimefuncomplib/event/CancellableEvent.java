@@ -7,7 +7,6 @@ import org.bukkit.event.HandlerList;
 import javax.annotation.Nonnull;
 
 public abstract class CancellableEvent extends Event implements Cancellable {
-    private static final HandlerList handlers = new HandlerList();
     private boolean cancelled;
 
     @Override
@@ -20,14 +19,4 @@ public abstract class CancellableEvent extends Event implements Cancellable {
         this.cancelled = cancelled;
     }
 
-    @Override
-    @Nonnull
-    public HandlerList getHandlers() {
-        return handlers;
-    }
-
-    @Nonnull
-    public static HandlerList getHandlerList() {
-        return handlers;
-    }
 }

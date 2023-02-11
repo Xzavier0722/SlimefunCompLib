@@ -4,7 +4,6 @@ import org.bukkit.block.Block;
 import org.bukkit.inventory.Inventory;
 
 public class CargoWithdrawEvent extends CargoOperationEvent {
-
     /**
      * @param node   : cargo node
      * @param target : target container
@@ -13,4 +12,5 @@ public class CargoWithdrawEvent extends CargoOperationEvent {
     public CargoWithdrawEvent(Block node, Block target, Inventory inv) {
         super(node, target, inv);
     }
+
 }
