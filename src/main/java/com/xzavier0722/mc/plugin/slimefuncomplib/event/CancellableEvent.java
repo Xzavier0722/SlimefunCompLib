@@ -25,4 +25,9 @@ public abstract class CancellableEvent extends Event implements Cancellable {
     public HandlerList getHandlers() {
         return handlers;
     }
+
+    @Nonnull
+    public static HandlerList getHandlerList() {
+        return handlers;
+    }
 }
